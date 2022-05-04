@@ -31,6 +31,7 @@
               </p>
             </a>
           </li>
+          @if(Auth::user()->typeuser === 'Administrator')
           <li class="nav-item">
             <a href="/input-data" class="nav-link">
               <i class="nav-icon"></i>
@@ -67,6 +68,54 @@
               </p>
             </a>
           </li>
+          @elseif(Auth::user()->typeuser === 'Admin')
+          <li class="nav-item">
+            <a href="/input-data" class="nav-link">
+              <i class="nav-icon"></i>
+              <p>
+                Input Data
+                <i class="fas fa-plus right"></i>
+              </p>
+            </a>
+          </li>
+          {{-- <li class="nav-item">
+            <a href="/display-data" class="nav-link">
+              <i class="nav-icon"></i>
+              <p>
+                Belum Di Telephone
+                <i class="fas fa-copy right"></i>
+              </p>
+            </a>
+          </li> --}}
+          <li class="nav-item">
+            <a href="/laporan" class="nav-link">
+              <i class="nav-icon"></i>
+              <p>
+                Laporan
+                <i class="fas fa-file-alt right"></i>
+              </p>
+            </a>
+          </li>
+          @elseif(Auth::user()->typeuser === 'CS')
+          <li class="nav-item">
+            <a href="/display-data" class="nav-link">
+              <i class="nav-icon"></i>
+              <p>
+                Belum Di Telephone
+                <i class="fas fa-copy right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/laporan" class="nav-link">
+              <i class="nav-icon"></i>
+              <p>
+                Laporan
+                <i class="fas fa-file-alt right"></i>
+              </p>
+            </a>
+          </li>
+          @endif
           {{-- <li class="nav-item menu-open">
             <a href="/" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>

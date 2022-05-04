@@ -77,7 +77,11 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label for="comment">Comment</label>
-                                    <input type="text" name="comment" class="form-control" autocomplete="off" value="{{ $dataTelp->comment }}">
+                                    <select name="comment" id="comment" class="form-control" required>
+                                        <option value="Good">Good</option>
+                                        <option value="Bad">Bad</option>
+                                        <option value="Outstanding">Outstanding</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>

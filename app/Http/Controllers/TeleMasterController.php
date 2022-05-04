@@ -65,7 +65,7 @@ class TeleMasterController extends Controller
                     'sudah_ditelp'  => $telpStatus,
                     'tgl_telp'      => $request['tgltelp'],
                     'telp_oleh'     => null,
-                    'comment'       => $request['comment'],
+                    'comment'       => $request['comment'] ?? null,
                     'createdby'     => Auth::user()->name,
                     'createdon'     => date('Y-m-d')
                 );
@@ -88,7 +88,7 @@ class TeleMasterController extends Controller
                     'sudah_ditelp'  => $telpStatus,
                     // 'tgl_telp'      => $tglTelp,
                     // 'telp_oleh'     => null,
-                    'comment'       => $request['comment'],
+                    'comment'       => $request['comment'] ?? null,
                     'createdby'     => Auth::user()->name,
                     'createdon'     => date('Y-m-d')
                 );

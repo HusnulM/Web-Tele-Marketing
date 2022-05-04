@@ -33,7 +33,7 @@
                             <i class="fas fa-minus"></i>
                         </button> -->
                         
-                        <a href="/setting/users" class="btn btn-danger btn-sm"> 
+                        <a href="/user" class="btn btn-danger btn-sm"> 
                             <i class="fa fa-arrow-alt-circle-left"></i> Kembali
                         </a>
                         <button type="submit" class="btn btn-primary btn-sm"> 
@@ -90,18 +90,17 @@
                                 <input type="password" name="password" class="form-control" autocomplete="new-password" required>
                             </div>
                         </div>
-                        {{-- <div class="col-lg-6 col-md-12">
+                        <div class="col-lg-6 col-md-12">
                             <div class="form-group">
                                 <label for="usertype">Type User</label>
-                                <select name="usertype" id="usertype" class="form-control">
+                                <select name="usertype" id="usertype" class="form-control" required>
                                     <option value="">-- Pilih Type User --</option>
                                     <option value="Administrator">Administrator</option>
-                                    <option value="Owner">Owner</option>
                                     <option value="Admin">Admin</option>
                                     <option value="CS">CS</option>
                                 </select>
                             </div>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">

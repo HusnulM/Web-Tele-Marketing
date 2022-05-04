@@ -37,6 +37,7 @@ class UserController extends Controller
             'name'     => 'required',
             'username' => 'required',
             'password' => 'required',
+            'usertype' => 'required'
         ]);
 
         $options = [
@@ -52,7 +53,8 @@ class UserController extends Controller
                 'name'        => $request['name'],
                 'email'       => $request['email'],
                 'username'    => $request['username'],
-                'password'    => $password
+                'password'    => $password,
+                'typeuser'    => $request['usertype']
             ]);
 
             DB::commit();
@@ -70,10 +72,11 @@ class UserController extends Controller
             'username' => 'required',
         ]);
 
-        
+        // return $request;
         DB::beginTransaction();
         try{
-            if(isset($request['password'])){
+            if($request['password'] !== 'null' && $request['password'] != null){
+                // return 'a';
                 $options = [
                     'cost' => 12,
                 ];
@@ -85,13 +88,16 @@ class UserController extends Controller
                     'name'        => $request['name'],
                     'email'       => $request['email'],
                     'username'    => $request['username'],
-                    'password'    => $password
+                    'password'    => $password,
+                    'typeuser'    => $request['usertype']
                 ]);
             }else{
+                // return 'b';
                 DB::table('users')->where('id',$request['iduser'])->update([
                     'name'        => $request['name'],
                     'email'       => $request['email'],
-                    'username'    => $request['username']
+                    'username'    => $request['username'],
+                    'typeuser'    => $request['usertype']
                 ]);
             }
             

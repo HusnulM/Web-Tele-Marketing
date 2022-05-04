@@ -59,6 +59,7 @@
                                     <input type="text" name="nama" class="form-control" autocomplete="off">
                                 </div>
                             </div>
+                            @if(Auth::user()->typeuser === 'CS')
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group clearfix">
                                     <div class="icheck-primary d-inline" style="margin-right:25px;">
@@ -74,12 +75,18 @@
                                     <input type="date" name="tgltelp" id="tgltelp" class="form-control" autocomplete="off">
                                 </div>
                             </div>
+                            
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label for="comment">Comment</label>
-                                    <input type="text" name="comment" class="form-control" autocomplete="off">
+                                    <select name="comment" id="comment" class="form-control" required>
+                                        <option value="Good">Good</option>
+                                        <option value="Bad">Bad</option>
+                                        <option value="Outstanding">Outstanding</option>
+                                    </select>
                                 </div>
                             </div>
+                            @endif
                         </div>
                     </div>
                 </div>

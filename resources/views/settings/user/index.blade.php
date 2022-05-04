@@ -69,6 +69,7 @@
                                 <th>Username</th>
                                 <th>Email</th>
                                 <th>Nama User</th>
+                                <th>Type User</th>
                                 <th></th>
                             </thead>
                             <tbody>
@@ -78,6 +79,7 @@
                                     <td>{{ $d->username }}</td>
                                     <td>{{ $d->email }}</td>
                                     <td>{{ $d->name }}</td>
+                                    <td>{{ $d->typeuser }}</td>
                                     <td style="text-align:center;">
                                         <a href="/user/delete/{{$d->id}}" class="btn btn-danger btn-sm">
                                             <i class="fa fa-trash"></i> HAPUS
